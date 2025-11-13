@@ -2,7 +2,7 @@ public class Employee {
 
     private static int countOfEmployee = 1;
 
-    private int id;
+    private final int id;
 
     private String name;
 
@@ -17,15 +17,7 @@ public class Employee {
 
 
 
-    public Employee(int id, String name, String secondName, String lastName, int department, int salary) {
-        this.id = id;
-        this.name = name;
-        this.secondName = secondName;
-        this.lastName = lastName;
-        this.department = department;
-        this.salary = salary;
-        countOfEmployee = id + 1;
-    }
+
 
     public Employee(String name, String secondName, String lastName, int department, int salary) {
         this.id = countOfEmployee;
@@ -41,9 +33,7 @@ public class Employee {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+
 
     public String getName() {
         return name;
