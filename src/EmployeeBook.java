@@ -1,18 +1,18 @@
 public class EmployeeBook {
 
-    static Employee[] employees = new Employee[10];
+    Employee[] employees = new Employee[10];
 
-    public static void obtainingAllEmployeeInformation() {
-        if (employees != null) {
+    public void obtainingAllEmployeeInformation() {
+
             for (Employee employee : employees) {
                 if (employee != null) {
                     System.out.println(employee);
                 }
             }
-        }
+
     }
 
-    public static void findAverageSalary() {
+    public void findAverageSalary() {
         int sumSalary = 0;
         int countOfWorkers = 0;
         for (Employee employee : employees) {
@@ -24,7 +24,7 @@ public class EmployeeBook {
         System.out.println("Средняя зарплата " + (float) sumSalary / countOfWorkers);
     }
 
-    public static void calculationTaxes(String type) {
+    public void calculationTaxes(String type) {
         switch (type) {
             case ("PROPORTIONAL"):
                 for (Employee employee : employees) {
@@ -58,7 +58,7 @@ public class EmployeeBook {
         }
     }
 
-    public static void indexSalary(int department) {
+    public void indexSalary(int department) {
         for (Employee employee : employees) {
             if (employee != null) {
                 if (employee.getDepartment() != department) {
@@ -71,7 +71,7 @@ public class EmployeeBook {
         }
     }
 
-    public static void levelSalary(int department, int salaryLevel) {
+    public void levelSalary(int department, int salaryLevel) {
         for (Employee employee : employees) {
             if (employee != null) {
                 if (employee.getDepartment() != department) {
@@ -86,33 +86,30 @@ public class EmployeeBook {
         }
     }
 
-    public static void findLowestSalary(int wage, int employeeNumber){
+    public void findLowestSalary(int wage, int employeeNumber){
 
         int i = 0;
         for (Employee employee : employees) {
 
-            while (i < employeeNumber) {
-
-                if (wage > employee.getSalary()) {
+                if (wage > employee.getSalary() && i < employeeNumber) {
                     System.out.println(employee);
                     i++;
                 }
                 break;
-            }
+
         }
     }
 
-    public static boolean comparisonEmployee(Employee employee){
-        boolean flag = false;
+    public boolean comparisonEmployee(Employee employee){
         for (Employee employee1 : employees){
             if (employee.equals(employee1)){
-                flag = true;
+                return true;
             }
         }
-        return flag;
+        return false;
     }
 
-    public static boolean addEmployee(Employee employee){
+    public boolean addEmployee(Employee employee){
         for (int i = 0; i < employees.length; i++){
             if (employees[i] == null) {
                 employees[i] = employee;
@@ -124,7 +121,7 @@ public class EmployeeBook {
     }
 
 
-    public static void findById(int id){
+    public void findById(int id){
         for (Employee employee : employees){
             if (employee.getId() == id){
                 System.out.println(employee);

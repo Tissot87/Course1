@@ -3,6 +3,7 @@
 public class Main {
     public static void main(String[] args) {
 
+        EmployeeBook book = new EmployeeBook();
 
         Employee employee1 = new Employee("a", "q", "z", 2, 1);
         Employee employee2 = new Employee("s", "a", "x", 1, 3);
@@ -16,17 +17,17 @@ public class Main {
         Employee employee10 = new Employee("q", "o", "e", 5, 9);
         Employee employee11 = new Employee("w", "p", "r", 4, 4);
 
-        System.out.println(EmployeeBook.addEmployee(employee1));
-        System.out.println(EmployeeBook.addEmployee(employee2));
-        System.out.println(EmployeeBook.addEmployee(employee3));
-        System.out.println(EmployeeBook.addEmployee(employee4));
-        System.out.println(EmployeeBook.addEmployee(employee5));
-        System.out.println(EmployeeBook.addEmployee(employee6));
-        System.out.println(EmployeeBook.addEmployee(employee7));
-        System.out.println(EmployeeBook.addEmployee(employee8));
-        System.out.println(EmployeeBook.addEmployee(employee9));
-        System.out.println(EmployeeBook.addEmployee(employee10));
-        System.out.println(EmployeeBook.addEmployee(employee11));
+        System.out.println(book.addEmployee(employee1));
+        System.out.println(book.addEmployee(employee2));
+        System.out.println(book.addEmployee(employee3));
+        System.out.println(book.addEmployee(employee4));
+        System.out.println(book.addEmployee(employee5));
+        System.out.println(book.addEmployee(employee6));
+        System.out.println(book.addEmployee(employee7));
+        System.out.println(book.addEmployee(employee8));
+        System.out.println(book.addEmployee(employee9));
+        System.out.println(book.addEmployee(employee10));
+        System.out.println(book.addEmployee(employee11));
 
 
     }
